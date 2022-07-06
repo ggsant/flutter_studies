@@ -33,6 +33,7 @@ p* ersistentFooterButton: This property takes in a list of widgets. Which are us
 * onEndDrawerChanged: Optional callback that is called when the Scaffold.endDrawer is opened or closed.
 
 Static Methods
+
 * geometryOf
 * hasDrawer
 * maybeOf
