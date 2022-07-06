@@ -28,3 +28,12 @@ endDrawerEnableOpenGesture: Again this property takes in a boolean value as the 
 * floatingActionButtonLocation: This property is responsible for the location of the floatingActionBotton.
 p* ersistentFooterButton: This property takes in a list of widgets. Which are usually buttons that are displayed underneath the scaffold.
 * resizeToAvoidBottomInsets: This property takes in a boolean value as the object. If set to true then the floating widgets on the scaffold resize themselves to avoid getting in the way of the on-screen keyboard.
+* restorationId: Restoration ID to save and restore the state of the Scaffold.
+* onDrawerChanged: Optional callback that is called when the Scaffold.drawer is opened or closed.
+* onEndDrawerChanged: Optional callback that is called when the Scaffold.endDrawer is opened or closed.
+
+Static Methods
+* geometryOf
+* hasDrawer
+* maybeOf
+* of
