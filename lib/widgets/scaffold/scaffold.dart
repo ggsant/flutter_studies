@@ -1,6 +1,25 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const ScaffoldWidget(),
+    );
+  }
+}
+
 class ScaffoldWidget extends StatelessWidget {
   const ScaffoldWidget({super.key});
 
@@ -11,17 +30,18 @@ class ScaffoldWidget extends StatelessWidget {
       restorationId: 'restorationId',
       backgroundColor: const Color.fromARGB(255, 174, 199, 244),
       primary: true,
-      extendBody: true,
-      extendBodyBehindAppBar: true,
+      extendBody: false,
+      extendBodyBehindAppBar: false,
       appBar: AppBar(
         title: const Text('Scaffold'),
+        backgroundColor: const Color.fromARGB(255, 39, 107, 231),
       ),
       drawerEnableOpenDragGesture: true,
       onDrawerChanged: (value) {},
       onEndDrawerChanged: (value) {},
       drawerScrimColor: const Color.fromARGB(255, 39, 107, 231),
       drawerDragStartBehavior: DragStartBehavior.down,
-      drawerEdgeDragWidth: 10,
+      drawerEdgeDragWidth: 20,
       drawer: Drawer(
         elevation: 16.0,
         child: Column(
@@ -87,12 +107,15 @@ class ScaffoldWidget extends StatelessWidget {
           ],
         ),
       ),
-      body: const Center(
-        child: Text(
-          "Welcome to Flutter Studies!!!",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 20.0,
+      body: Container(
+        color: Colors.red,
+        child: const Center(
+          child: Text(
+            "Body",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+            ),
           ),
         ),
       ),
