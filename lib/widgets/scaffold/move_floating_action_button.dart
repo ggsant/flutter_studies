@@ -15,22 +15,6 @@ class MoveFloatingActionButton extends StatelessWidget {
       title: appTitle,
       home: Scaffold(
         appBar: AppBar(title: const Text(appTitle)),
-        body: Form(
-          key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TextFormField(
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter some text';
-                  }
-                  return null;
-                },
-              ),
-            ],
-          ),
-        ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: 0,
           fixedColor: Colors.lightBlue,
@@ -71,9 +55,7 @@ class CustomFabLoc extends FloatingActionButtonLocation {
   Offset getOffset(ScaffoldPrelayoutGeometry scaffoldGeometry) {
     return Offset(
       scaffoldGeometry.scaffoldSize.width * .25,
-
-      ///customize here
-      scaffoldGeometry.scaffoldSize.height - kToolbarHeight * 5,
+      scaffoldGeometry.scaffoldSize.height - kToolbarHeight * 2,
     );
   }
 }
